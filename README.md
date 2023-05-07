@@ -1,6 +1,6 @@
 [‼️]: ✏️README.mdt
 
-# @w5/tmpl
+# @w5/svg2webp
 
 ## Install
 
@@ -44,7 +44,7 @@ output :
 
 ```
 
-  ✔ svg → webp (893ms)
+  ✔ svg → webp (907ms)
   ─
 
   1 test passed
