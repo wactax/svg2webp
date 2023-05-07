@@ -12,6 +12,8 @@ import {
 
 import uridir from '@w5/uridir';
 
+import write from '@w5/write';
+
 import {
   readFileSync
 } from 'fs';
@@ -22,7 +24,7 @@ ROOT = dirname(uridir(import.meta));
 // test(
 //   'svg2webp'
 // (t) =>
-console.log(svgWebp(readFileSync(join(ROOT, 'logo.svg')), 80));
+write(join(ROOT, 'logo.webp'), svgWebp(readFileSync(join(ROOT, 'logo.svg')), 80));
 
 // t.is(sum(1, 2), 3)
 //     return
