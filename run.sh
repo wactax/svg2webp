@@ -5,4 +5,5 @@ cd $DIR
 set -ex
 
 yarn run build:debug
-RUST_BACKTRACE=short exec ${1:-yarn test}
+./test/main.mjs
+#RUST_BACKTRACE=short exec ${1:-yarn test}
