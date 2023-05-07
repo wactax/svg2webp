@@ -42,7 +42,7 @@ fn svg_webp(svg: Buffer, quality: f64) -> anyhow::Result<Buffer> {
 
       let encoder = Encoder::from_rgba(img, width, height);
       let encoded_webp = encoder.encode(quality as f32);
-      let b: Box<u8> = Box::from(encoded_webp.as_bytes());
+      let b = encoded_webp.as_bytes();
       return Ok(b.into());
     } else {
       return Err(Error::RESVG)?;
