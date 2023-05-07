@@ -1,0 +1,21 @@
+{
+  "name": "@w5/svg2webp-linux-arm64-musl",
+  "version": "0.0.0",
+  "os": [
+    "linux"
+  ],
+  "cpu": [
+    "arm64"
+  ],
+  "main": "svg2webp.linux-arm64-musl.node",
+  "files": [
+    "svg2webp.linux-arm64-musl.node"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">= 10"
+  },
+  "libc": [
+    "musl"
+  ]
+}

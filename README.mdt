@@ -1,0 +1,21 @@
+# @w5/tmpl
+
+## Install
+
+```
+pnpm i -g @w5/svg2webp
+```
+
+## Test
+
+[coffee/main.coffee](./coffee/main.coffee) :
+
+```coffee
+<+ ./coffee/main.coffee >
+```
+
+output :
+
+```
+<+ ./out.txt >
+```

@@ -1,0 +1,15 @@
+{
+  "name": "@w5/svg2webp-darwin-universal",
+  "version": "0.0.0",
+  "os": [
+    "darwin"
+  ],
+  "main": "svg2webp.darwin-universal.node",
+  "files": [
+    "svg2webp.darwin-universal.node"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">= 10"
+  }
+}
