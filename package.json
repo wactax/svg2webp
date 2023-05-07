@@ -1,6 +1,6 @@
 {
   "name": "@w5/ru",
-  "version": "0.0.0",
+  "version": "0.0.40",
   "main": "index.js",
   "types": "index.d.ts",
   "napi": {
@@ -21,9 +21,11 @@
   "devDependencies": {
     "@napi-rs/cli": "^2.15.2",
     "@w5/coffee_plus": "^0.0.13",
+    "@w5/loader": "^0.0.3",
     "ava": "^5.2.0",
     "coffeescript": "^2.7.0",
-    "concurrently": "^8.0.1"
+    "concurrently": "^8.0.1",
+    "zx": "^7.2.2"
   },
   "ava": {
     "timeout": "3m"

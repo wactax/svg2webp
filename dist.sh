@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 
-DIR=$(realpath $0) && DIR=${DIR%/*}
+DIR=$(realpath ${0%/*})
 cd $DIR
 set -ex
 
-yarn build
-yarn run publish
+exec ./sh/dist.coffee $DIR
