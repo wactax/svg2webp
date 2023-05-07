@@ -10,11 +10,11 @@ crate-type = ["cdylib"]
 anyhow = "1.0.71"
 image = "0.24.6"
 # Default enable napi4 feature, see https://nodejs.org/api/n-api.html#node-api-version-matrix
-napi = { version = "2.12.0", default-features = false, features = [
+napi = { version = "2.12.6", default-features = false, features = [
   "napi8",
   "error_anyhow"
 ] }
-napi-derive = "2.12.2"
+napi-derive = "2.12.5"
 resvg = "0.32.0"
 thiserror = "1.0.40"
 tiny-skia = "0.9.0"
