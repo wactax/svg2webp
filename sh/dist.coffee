@@ -31,8 +31,10 @@ writeFileSync(
   JSON.stringify json,null,2
 )
 
+tag = 'v'+version
 
 await $'git add -u'
-await $"git commit -m 'v#{version}'"
-await $"git tag v#{version}"
-await $'git push'
+await $"git commit -m '#{tag}'"
+await $"git tag #{tag}"
+await $'git push origin '+tag
+
