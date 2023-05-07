@@ -61,7 +61,7 @@ fn _svg_webp(svg: &Buffer, quality: f32) -> anyhow::Result<Buffer> {
       let img = pixmap.data();
 
       let encoder = Encoder::from_rgba(img, width, height);
-      let encoded_webp = encoder.encode(quality as f32);
+      let encoded_webp = encoder.encode(quality);
       let b = encoded_webp.as_bytes();
       return Ok(b.into());
     } else {
@@ -71,6 +71,7 @@ fn _svg_webp(svg: &Buffer, quality: f32) -> anyhow::Result<Buffer> {
   Err(Error::PIXMAP)?
 }
 
+#[allow(dead_code)]
 #[napi]
 fn svg_webp(svg: Buffer, quality: f64) -> AsyncTask<SvgWebp> {
   let quality = quality as f32;
