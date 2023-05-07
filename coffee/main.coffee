@@ -1,24 +1,25 @@
 #!/usr/bin/env coffee
 
 > ../index.js > svgWebp
+  ava:test
   path > join dirname
   @w5/uridir
   @w5/write
   fs > readFileSync
-# ava:test
 
 ROOT = dirname uridir import.meta
 
-# test(
-#   'svg2webp'
-# (t) =>
-write(
-  join(ROOT, 'logo.webp')
-  await svgWebp(
-    readFileSync join ROOT, 'logo.svg'
-    80
-  )
+test(
+  'svg → webp'
+  (t) =>
+    r = await svgWebp(
+      readFileSync join ROOT, 'logo.svg'
+      80
+    )
+    write(
+      join(ROOT, 'logo.webp')
+      r
+    )
+    t.true(r instanceof Buffer)
+    return
 )
-    # t.is(sum(1, 2), 3)
-#     return
-# )

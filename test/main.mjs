@@ -5,6 +5,8 @@ import {
   svgWebp
 } from '../index.js';
 
+import test from 'ava';
+
 import {
   join,
   dirname
@@ -18,14 +20,11 @@ import {
   readFileSync
 } from 'fs';
 
-// ava:test
 ROOT = dirname(uridir(import.meta));
 
-// test(
-//   'svg2webp'
-// (t) =>
-write(join(ROOT, 'logo.webp'), (await svgWebp(readFileSync(join(ROOT, 'logo.svg')), 80)));
-
-// t.is(sum(1, 2), 3)
-//     return
-// )
+test('svg → webp', async(t) => {
+  var r;
+  r = (await svgWebp(readFileSync(join(ROOT, 'logo.svg')), 80));
+  write(join(ROOT, 'logo.webp'), r);
+  t.true(r instanceof Buffer);
+});
