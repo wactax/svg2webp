@@ -1,0 +1,3 @@
+# `@w5/svg2webp-linux-x64-gnu`
+
+This is the **x86_64-unknown-linux-gnu** binary for `@w5/svg2webp`
