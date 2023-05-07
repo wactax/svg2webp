@@ -44,7 +44,7 @@ output :
 
 ```
 
-  ✔ svg → webp (907ms)
+  ✔ svg → webp (894ms)
   ─
 
   1 test passed
