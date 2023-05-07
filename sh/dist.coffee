@@ -33,6 +33,6 @@ writeFileSync(
 
 
 await $'git add -u'
-await $"git commit -m '#{json.name} v#{version}'"
+await $"git commit -m 'v#{version}'"
 await $"git tag v#{version}"
 await $'git push'
