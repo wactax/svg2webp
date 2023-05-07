@@ -32,6 +32,3 @@ codegen-units = 1
 overflow-checks = false
 panic = 'abort'
 debug-assertions = false
-
-[registries.crates-io]
-protocol = "sparse"
