@@ -1,5 +1,8 @@
 use image::EncodableLayout;
-use napi::bindgen_prelude::Buffer;
+use napi::{
+  bindgen_prelude::{AsyncTask, Buffer},
+  Env, Result, Task,
+};
 use thiserror::Error;
 use tiny_skia::PremultipliedColorU8;
 use usvg::TreeParsing;
@@ -17,8 +20,25 @@ pub enum Error {
   RESVG,
 }
 
-#[napi]
-fn svg_webp(svg: Buffer, quality: f64) -> anyhow::Result<Buffer> {
+struct SvgWebp {
+  svg: Buffer,
+  quality: f32,
+}
+
+impl Task for SvgWebp {
+  type Output = Buffer;
+  type JsValue = Buffer;
+
+  fn compute(&mut self) -> Result<Self::Output> {
+    Ok(_svg_webp(&self.svg, self.quality)?)
+  }
+
+  fn resolve(&mut self, _: Env, output: Self::Output) -> Result<Self::JsValue> {
+    Ok(output)
+  }
+}
+
+fn _svg_webp(svg: &Buffer, quality: f32) -> anyhow::Result<Buffer> {
   let opt = usvg::Options::default();
   let rtree = usvg::Tree::from_data(svg.as_ref(), &opt)?;
   let pixmap_size = rtree.size.to_screen_size();
@@ -49,4 +69,10 @@ fn svg_webp(svg: Buffer, quality: f64) -> anyhow::Result<Buffer> {
     }
   }
   Err(Error::PIXMAP)?
+}
+
+#[napi]
+fn svg_webp(svg: Buffer, quality: f64) -> AsyncTask<SvgWebp> {
+  let quality = quality as f32;
+  AsyncTask::new(SvgWebp { svg, quality })
 }

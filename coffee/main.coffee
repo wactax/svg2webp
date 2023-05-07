@@ -14,7 +14,7 @@ ROOT = dirname uridir import.meta
 # (t) =>
 write(
   join(ROOT, 'logo.webp')
-  svgWebp(
+  await svgWebp(
     readFileSync join ROOT, 'logo.svg'
     80
   )
