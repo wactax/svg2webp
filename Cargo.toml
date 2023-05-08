@@ -28,6 +28,7 @@ codegen-units = 1
 overflow-checks = false
 panic = 'abort'
 debug-assertions = false
+strip = true
 
 [dependencies.napi]
 version = "2.12.6"
