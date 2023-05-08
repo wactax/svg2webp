@@ -1,6 +1,6 @@
 {
   "name": "@w5/svg2webp",
-  "version": "0.0.22",
+  "version": "0.0.23",
   "type": "module",
   "exports": {
     ".": {
@@ -38,18 +38,22 @@
     "ava": "^5.2.0",
     "coffeescript": "^2.7.0",
     "concurrently": "^8.0.1",
+    "esm": "^3.2.25",
     "zx": "^7.2.2"
   },
   "ava": {
+    "require": [
+      "esm"
+    ],
     "timeout": "3m"
   },
   "engines": {
-    "node": ">= 10"
+    "node": ">= 20"
   },
   "scripts": {
     "artifacts": "napi artifacts",
-    "build": "napi build --platform --release && ./sh/do.patch.js",
-    "build:debug": "napi build --platform && ./sh/do.patch.js",
+    "build": "./sh/build.sh --release",
+    "build:debug": "./sh/build.sh",
     "prepublishOnly": "napi prepublish -t npm",
     "test": "ava",
     "universal": "napi universal",

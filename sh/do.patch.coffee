@@ -34,9 +34,7 @@ main = =>
 
   out = '''import { createRequire } from "module";
   import { dirname } from "path";
-  const __dirname = dirname(
-  new URL(decodeURIComponent(import.meta.url)).pathname,
-  );
+  const __dirname = dirname( new URL(decodeURIComponent(import.meta.url)).pathname);
   const require = createRequire(import.meta.url);''' +li
 
   patch_fp = join ROOT, 'patch.js'
