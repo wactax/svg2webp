@@ -15,11 +15,12 @@ pnpm i -g @w5/svg2webp
 ```coffee
 #!/usr/bin/env coffee
 
-> ../index.js > svgWebp
+> ../index.js:svgWebp
   ava:test
   path > join dirname
   @w5/uridir
   @w5/write
+  # @w5/read
   fs > readFileSync
 
 ROOT = dirname uridir import.meta
@@ -44,7 +45,7 @@ output :
 
 ```
 
-  ✔ svg → webp (913ms)
+  ✔ svg → webp (956ms)
   ─
 
   1 test passed
