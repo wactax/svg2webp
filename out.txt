@@ -1,5 +1,5 @@
 
-  [32m✔[39m svg → webp [90m[2m(909ms)[22m[39m
-  [90m─[39m
+  ✔ svg → webp (963ms)
+  ─
 
-  [32m1 test passed[39m
+  1 test passed
