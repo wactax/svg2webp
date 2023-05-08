@@ -33,8 +33,8 @@ main = =>
     export_li = t.slice(t.indexOf('{')+1,p).split(',').map((i)=>i.trim())
 
   out = '''import { createRequire } from "module";
-  import { dirname } from "path";
-  const __dirname = dirname( new URL(decodeURIComponent(import.meta.url)).pathname);
+  import { dirname, sep } from "path";
+  const __dirname = dirname(decodeURIComponent(import.meta.url.slice(sep=='/'? 7:8)));
   const require = createRequire(import.meta.url);''' +li
 
   patch_fp = join ROOT, 'patch.js'
