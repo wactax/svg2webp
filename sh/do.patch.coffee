@@ -4,9 +4,9 @@
   @w5/read
   @w5/write
   fs > existsSync
-  path > join
+  path > join dirname
 
-ROOT = uridir(import.meta)
+ROOT = dirname uridir(import.meta)
 main = =>
   index = read join ROOT,'index.js'
   if ~ index.indexOf('import.meta.url')

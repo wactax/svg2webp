@@ -12,10 +12,11 @@ import {
 } from 'fs';
 
 import {
-  join
+  join,
+  dirname
 } from 'path';
 
-ROOT = uridir(import.meta);
+ROOT = dirname(uridir(import.meta));
 
 main = () => {
   var i, index, j, len, li, out, p, patch, pos;
