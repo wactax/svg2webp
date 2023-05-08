@@ -262,8 +262,8 @@ __metadata:
     "@w5/coffee_plus": ^0.0.13
     "@w5/loader": ^0.0.3
     "@w5/mdt": ^0.0.16
-    "@w5/read": ^0.0.1
     "@w5/uridir": ^0.0.1
+    "@w5/utf8": ^0.0.1
     "@w5/write": ^0.0.1
     ava: ^5.1.1
     coffeescript: ^2.7.0
@@ -276,6 +276,13 @@ __metadata:
   version: 0.0.1
   resolution: "@w5/uridir@npm:0.0.1"
   checksum: a090ca9bca1e309720ae688d0e3241defd63811918246de15062c3d4e403b5a8999b8f15a756acc5bd2506c8bd541509d451548cb63136548782bdd355785519
+  languageName: node
+  linkType: hard
+
+"@w5/utf8@npm:^0.0.1":
+  version: 0.0.1
+  resolution: "@w5/utf8@npm:0.0.1"
+  checksum: 586a033065e3107a7bfe197b931522db2a8e28175cf45d9ada6c8c4f1fd512ccb7024cf4ff163e9013a04d321451d0ecab1b032f4adb2ae72d25955623e8eae4
   languageName: node
   linkType: hard
 
