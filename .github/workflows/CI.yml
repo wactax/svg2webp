@@ -1,7 +1,7 @@
 name: CI
 env:
   DEBUG: napi:*
-  APP_NAME: svg2webp
+  APP_NAME: lib
   MACOSX_DEPLOYMENT_TARGET: '13.3'
 'on':
   push:
