@@ -30,7 +30,7 @@ panic = 'abort'
 debug-assertions = false
 
 [dependencies.napi]
-path = "../napi-rs/crates/napi"
+version = "2.12.6"
+#path = "../napi-rs/crates/napi"
 default-features = false
 features = ["napi8", "error_anyhow"]
-# version = "2.12.6"

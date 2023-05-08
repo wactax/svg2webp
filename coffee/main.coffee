@@ -5,7 +5,8 @@
   path > join dirname
   @w5/uridir
   @w5/write
-  @w5/read
+  # @w5/read
+  fs > readFileSync
 
 ROOT = dirname uridir import.meta
 
@@ -13,7 +14,7 @@ test(
   'svg → webp'
   (t) =>
     r = await svgWebp(
-      read join ROOT, 'logo.svg'
+      readFileSync join ROOT, 'logo.svg'
       80
     )
     write(

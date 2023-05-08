@@ -16,13 +16,16 @@ import uridir from '@w5/uridir';
 
 import write from '@w5/write';
 
-import read from '@w5/read';
+import {
+  // @w5/read
+  readFileSync
+} from 'fs';
 
 ROOT = dirname(uridir(import.meta));
 
 test('svg → webp', async(t) => {
   var r;
-  r = (await svgWebp(read(join(ROOT, 'logo.svg')), 80));
+  r = (await svgWebp(readFileSync(join(ROOT, 'logo.svg')), 80));
   write(join(ROOT, 'logo.webp'), r);
   t.true(r instanceof Buffer);
 });

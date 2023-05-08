@@ -1,24 +1,5 @@
 
-  [31m✘ [fail]:[39m svg → webp [3m[31mRejected promise returned by test[39m[23m
+  [32m✔[39m svg → webp [90m[2m(902ms)[22m[39m
   [90m─[39m
 
-  [1msvg → webp[22m
-
-  [90mtest/main.mjs:25[39m
-
-   [90m24:[39m   var r;                                                
-  [41m[1m 25:   r = (await svgWebp(read(join(ROOT, 'logo.svg')), 80));[22m[49m
-   [90m26:[39m   write(join(ROOT, 'logo.webp'), r);                    
-
-  Rejected promise returned by test. Reason:
-
-  [35mError[39m [90m{[39m
-    code: [34m'[39m[34mInvalidArg[39m[34m'[39m[90m,[39m
-    message: [34m'[39m[34mFailed to create reference from Buffer[39m[34m'[39m[90m,[39m
-  [90m}[39m
-
-  [90m› file://test/main.mjs:25:14[39m
-
-  [90m─[39m
-
-  [31m1 test failed[39m
+  [32m1 test passed[39m
