@@ -48,8 +48,8 @@
   },
   "scripts": {
     "artifacts": "napi artifacts",
-    "build": "napi build --platform --release && ./patch.js",
-    "build:debug": "napi build --platform && ./patch.js",
+    "build": "napi build --platform --release && ./do.patch.js",
+    "build:debug": "napi build --platform && ./do.patch.js",
     "prepublishOnly": "napi prepublish -t npm",
     "test": "ava",
     "universal": "napi universal",

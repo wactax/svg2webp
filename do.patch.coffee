@@ -33,7 +33,7 @@ main = =>
   const require = createRequire(import.meta.url);''' +li.join('\n')
   patch = join ROOT, 'patch.js'
   if existsSync patch
-    out += ';'+read(patch)
+    out += ';\n'+read(patch)
 
   write(
     join ROOT,'index.js'
