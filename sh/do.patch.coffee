@@ -23,17 +23,33 @@ main = =>
         i = i.trimEnd()
         li[pos] = 'import '+i.slice(6,-1).replace(/\s*=\s*/g,' from ').replace('require(','')
 
-  li[li.length-1] = 'export '+li[li.length-1]
+  li = li.join('\n')
+  p = li.lastIndexOf('const ')
+  if p > 0
+    t = li.slice(p)
+    li = li.slice(0,p)
+    p = t.lastIndexOf('}')
+    end = t.slice(p)
+    export_li = t.slice(t.indexOf('{')+1,p).split(',').map((i)=>i.trim())
 
   out = '''import { createRequire } from "module";
   import { dirname } from "path";
   const __dirname = dirname(
   new URL(decodeURIComponent(import.meta.url)).pathname,
   );
-  const require = createRequire(import.meta.url);''' +li.join('\n')
-  patch = join ROOT, 'patch.js'
-  if existsSync patch
-    out += ';\n'+read(patch)
+  const require = createRequire(import.meta.url);''' +li
+
+  patch_fp = join ROOT, 'patch.js'
+
+  if existsSync patch_fp
+    patch = read(patch_fp)
+    out += ';\n'+patch
+  else
+    patch = ''
+
+  if export_li
+    for i from export_li
+      out+='\nexport const '+i+' = nativeBinding.'+i+';'
 
   write(
     join ROOT,'index.js'
