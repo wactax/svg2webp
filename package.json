@@ -1,6 +1,6 @@
 {
   "name": "@w5/svg2webp",
-  "version": "0.0.23",
+  "version": "0.0.24",
   "type": "module",
   "exports": {
     ".": {

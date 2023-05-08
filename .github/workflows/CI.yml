@@ -1,7 +1,7 @@
 name: CI
 env:
   DEBUG: napi:*
-  APP_NAME: svg2webp
+  APP_NAME: 
   MACOSX_DEPLOYMENT_TARGET: '13.3'
 'on':
   push:
@@ -25,6 +25,9 @@ jobs:
           - host: macos-latest
             target: x86_64-apple-darwin
             build: |
+              if ! [ -x "$(command -v realpath)" ]; then
+                brew install coreutils
+              fi
               yarn build
           - host: windows-latest
             build: yarn build
@@ -42,6 +45,9 @@ jobs:
           - host: macos-latest
             target: aarch64-apple-darwin
             build: |
+              if ! [ -x "$(command -v realpath)" ]; then
+                brew install coreutils
+              fi
               yarn build --target aarch64-apple-darwin
           - host: ubuntu-latest
             target: aarch64-unknown-linux-gnu
