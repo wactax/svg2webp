@@ -1,5 +1,14 @@
 
-  [32m✔[39m svg → webp [90m[2m(958ms)[22m[39m
+  [1mUncaught exception in test/main.mjs[22m
+
+  Error [ERR_REQUIRE_ESM]: require() of ES Module /Users/z/git/svg2webp/node_modules/@w5/utf8/utf8e.js from /Users/z/git/svg2webp/node_modules/@w5/utf8/autoe.cjs not supported.
+  Instead change the require of utf8e.js in /Users/z/git/svg2webp/node_modules/@w5/utf8/autoe.cjs to a dynamic import() which is available in all CommonJS modules.
+
+  [90m› Instead change the require of utf8e.js in node_modules/@w5/utf8/autoe.cjs to a dynamic import() which is available in all CommonJS modules.[39m
+  [90m› Object.<anonymous> (node_modules/@w5/utf8/autoe.cjs:7:37)[39m
+  [90m› Object.<anonymous> (index.js:258:15)[39m
+
+  [31m✘ test/main.mjs exited with a non-zero exit code: 1[39m
   [90m─[39m
 
-  [32m1 test passed[39m
+  [31m1 uncaught exception[39m

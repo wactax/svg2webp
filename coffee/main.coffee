@@ -1,6 +1,6 @@
 #!/usr/bin/env coffee
 
-> ../index.js > svgWebp
+> ../index.js:svgWebp
   ava:test
   path > join dirname
   @w5/uridir

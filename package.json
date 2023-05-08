@@ -51,6 +51,8 @@
   },
   "packageManager": "yarn@3.5.1",
   "dependencies": {
-    "@w5/utf8": "^0.0.2"
+    "@babel/cli": "^7.21.5",
+    "@babel/core": "^7.21.8",
+    "@w5/utf8": "^0.0.3"
   }
 }

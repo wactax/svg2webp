@@ -1,9 +1,7 @@
 #!/usr/bin/env -S node --loader=@w5/jsext --trace-uncaught --expose-gc --unhandled-rejections=strict --experimental-import-meta-resolve
 var ROOT;
 
-import {
-  svgWebp
-} from '../index.js';
+import svgWebp from '../index.js';
 
 import test from 'ava';
 
