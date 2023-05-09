@@ -3,13 +3,11 @@ use napi::{
   bindgen_prelude::{AsyncTask, Buffer},
   Env, Result, Task,
 };
+use napi_derive::napi;
 use thiserror::Error;
 use tiny_skia::PremultipliedColorU8;
 use usvg::TreeParsing;
 use webp::Encoder;
-
-#[macro_use]
-extern crate napi_derive;
 
 #[derive(Error, Debug)]
 pub enum Error {
