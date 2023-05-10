@@ -31,6 +31,7 @@ writeFileSync(
   package_json_fp
   JSON.stringify json,null,2
 )
+await $'./sh/clippy.sh'
 await $'./test.sh'
 await make cwd
 tag = 'v'+version
