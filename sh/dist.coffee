@@ -31,13 +31,13 @@ writeFileSync(
   package_json_fp
   JSON.stringify json,null,2
 )
-await $'./sh/clippy.sh'
 await $'./test.sh'
 await make cwd
 tag = 'v'+version
 
 await $'git add -u'
 await $"git commit -m '#{tag}'"
+await $'./sh/clippy.sh'
 await $"git tag #{tag}"
 await $'git push origin '+tag
 
