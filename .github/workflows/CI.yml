@@ -4,6 +4,7 @@ env:
   APP_NAME: svg2webp
   MACOSX_DEPLOYMENT_TARGET: '13.3'
 'on':
+  workflow_dispatch: 
   push:
     branches:
       - main
