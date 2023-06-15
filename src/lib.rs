@@ -69,9 +69,8 @@ fn _svg_webp(svg: &Buffer, quality: f32) -> anyhow::Result<Buffer> {
   Err(Error::PIXMAP)?
 }
 
-#[allow(dead_code)]
 #[napi]
-fn svg_webp(svg: Buffer, quality: f64) -> AsyncTask<SvgWebp> {
+pub fn svg_webp(svg: Buffer, quality: f64) -> AsyncTask<SvgWebp> {
   let quality = quality as f32;
   AsyncTask::new(SvgWebp { svg, quality })
 }
