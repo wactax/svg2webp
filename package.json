@@ -28,18 +28,18 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@napi-rs/cli": "^2.16.1",
+    "@napi-rs/cli": "^2.16.3",
     "@w5/coffee_plus": "^0.0.13",
     "@w5/loader": "^0.0.3",
     "@w5/mdt": "^0.0.16",
     "@w5/read": "^0.0.1",
     "@w5/uridir": "^0.0.1",
     "@w5/write": "^0.0.1",
-    "ava": "^5.3.0",
+    "ava": "^5.3.1",
     "coffeescript": "^2.7.0",
     "concurrently": "^8.2.0",
     "esm": "^3.2.25",
-    "zx": "^7.2.2"
+    "zx": "^7.2.3"
   },
   "ava": {
     "require": [
