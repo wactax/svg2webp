@@ -1,6 +1,6 @@
 {
   "name": "@w5/svg2webp",
-  "version": "0.0.35",
+  "version": "0.0.36",
   "type": "module",
   "exports": {
     ".": {
@@ -28,7 +28,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@napi-rs/cli": "^2.16.3",
+    "@napi-rs/cli": "^2.16.2",
     "@w5/coffee_plus": "^0.0.13",
     "@w5/loader": "^0.0.3",
     "@w5/mdt": "^0.0.16",
