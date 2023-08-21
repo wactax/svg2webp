@@ -55,12 +55,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@napi-rs/cli@npm:^2.16.1":
-  version: 2.16.1
-  resolution: "@napi-rs/cli@npm:2.16.1"
+"@napi-rs/cli@npm:^2.16.2":
+  version: 2.16.2
+  resolution: "@napi-rs/cli@npm:2.16.2"
   bin:
     napi: scripts/index.js
-  checksum: 5f61712cf1a4002b7b9b65bc4a6f2a7df68b197cfc7024c7d28820e3b12b5e9c0baa0d85f262f25dbf928586ce01c5c06837754f9f98ef4ebafa55dd027c6837
+  checksum: 98f2905fbc2dbd84417899b12917d1e3b7b02041f8f0ed90138eaf0461a883646c157bd6192c1f6bc8ced6f122b06186183b72d3833810c4df3d7904fe01fc6b
   languageName: node
   linkType: hard
 
@@ -258,7 +258,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@w5/svg2webp@workspace:."
   dependencies:
-    "@napi-rs/cli": ^2.16.1
+    "@napi-rs/cli": ^2.16.2
     "@w5/coffee_plus": ^0.0.13
     "@w5/loader": ^0.0.3
     "@w5/mdt": ^0.0.16
@@ -266,11 +266,11 @@ __metadata:
     "@w5/uridir": ^0.0.1
     "@w5/utf8": ^0.0.3
     "@w5/write": ^0.0.1
-    ava: ^5.3.0
+    ava: ^5.3.1
     coffeescript: ^2.7.0
     concurrently: ^8.2.0
     esm: ^3.2.25
-    zx: ^7.2.2
+    zx: ^7.2.3
   languageName: unknown
   linkType: soft
 
@@ -475,9 +475,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ava@npm:^5.3.0":
-  version: 5.3.0
-  resolution: "ava@npm:5.3.0"
+"ava@npm:^5.3.1":
+  version: 5.3.1
+  resolution: "ava@npm:5.3.1"
   dependencies:
     acorn: ^8.8.2
     acorn-walk: ^8.2.0
@@ -529,7 +529,7 @@ __metadata:
       optional: true
   bin:
     ava: entrypoints/cli.mjs
-  checksum: 2e4177148a629dcf9b9a799b2f90a3e586864fa6f9cb80fcd68446d33978bcd4ab3054110472d9d1e1d556c91ff1381dc9803ad042e71609ac09109dc579638f
+  checksum: 126a5932baef74eccd8bec992bd522e25c05b6ee4985dde87c20cece76c2377f0bf9448f242f3f9cd2abbf7a5ac932fe4e4abde2a23792d6271a6088e5a1984e
   languageName: node
   linkType: hard
 
@@ -2935,9 +2935,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zx@npm:^7.2.2":
-  version: 7.2.2
-  resolution: "zx@npm:7.2.2"
+"zx@npm:^7.2.3":
+  version: 7.2.3
+  resolution: "zx@npm:7.2.3"
   dependencies:
     "@types/fs-extra": ^11.0.1
     "@types/minimist": ^1.2.2
@@ -2956,6 +2956,6 @@ __metadata:
     yaml: ^2.2.2
   bin:
     zx: build/cli.js
-  checksum: 6d9538001c7d989639384f493070fdacf3a87627cec230cb8bb142a869a5b7375417c9a31f1ff74697fd37a4f6e9ab62223a07703a2cb8e84ddb9a2b7a17d251
+  checksum: 33b05e26ec3a429de6ff8db759d7b7857b947f4845025416db410bedaa8e613608a6d1916f257e129625d0192b6ba43e482356c6844ff90d15b0fd06dd9b98d2
   languageName: node
   linkType: hard
