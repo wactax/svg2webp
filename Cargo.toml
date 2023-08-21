@@ -7,15 +7,15 @@ version = "0.0.0"
 crate-type = ["cdylib"]
 
 [dependencies]
-anyhow = "1.0.71"
+anyhow = "1.0.75"
 # Default enable napi4 feature, see https://nodejs.org/api/n-api.html#node-api-version-matrix
-napi-derive = "2.12.5"
-image = "0.24.6"
-resvg = "0.32.0"
-thiserror = "1.0.40"
-tiny-skia = "0.9.0"
-usvg = "0.32.0"
-webp = "0.2.2"
+napi-derive = "2.13.0"
+image = "0.24.7"
+resvg = "0.35.0"
+thiserror = "1.0.47"
+tiny-skia = "0.10.0"
+usvg = "0.35.0"
+webp = "0.2.5"
 
 [build-dependencies]
 napi-build = "2.0.1"
@@ -31,7 +31,7 @@ debug-assertions = false
 strip = true
 
 [dependencies.napi]
-version = "2.12.6"
+version = "2.13.3"
 #path = "../napi-rs/crates/napi"
 default-features = false
 features = ["napi8", "error_anyhow"]

@@ -18,7 +18,7 @@ pub enum Error {
   RESVG,
 }
 
-struct SvgWebp {
+pub struct SvgWebp {
   svg: Buffer,
   quality: f32,
 }
@@ -39,32 +39,23 @@ impl Task for SvgWebp {
 fn _svg_webp(svg: &Buffer, quality: f32) -> anyhow::Result<Buffer> {
   let opt = usvg::Options::default();
   let rtree = usvg::Tree::from_data(svg.as_ref(), &opt)?;
-  let pixmap_size = rtree.size.to_screen_size();
-  let width = pixmap_size.width();
-  let height = pixmap_size.height();
+  let rtree = resvg::Tree::from_usvg(&rtree);
+  let pixmap_size = rtree.size;
+  let width = pixmap_size.width() as u32;
+  let height = pixmap_size.height() as u32;
   if let Some(mut pixmap) = tiny_skia::Pixmap::new(width, height) {
     // 去除透明度（默认是黑底，255-颜色会改为用白底）
     for px in pixmap.pixels_mut() {
       *px = PremultipliedColorU8::from_rgba(255 - px.red(), 255 - px.green(), 255 - px.blue(), 255)
         .unwrap();
     }
-    if resvg::render(
-      &rtree,
-      resvg::FitTo::Original,
-      tiny_skia::Transform::default(),
-      pixmap.as_mut(),
-    )
-    .is_some()
-    {
-      let img = pixmap.data();
+    rtree.render(usvg::Transform::default(), &mut pixmap.as_mut());
+    let img = pixmap.data();
 
-      let encoder = Encoder::from_rgba(img, width, height);
-      let encoded_webp = encoder.encode(quality);
-      let b = encoded_webp.as_bytes();
-      return Ok(b.into());
-    } else {
-      return Err(Error::RESVG)?;
-    }
+    let encoder = Encoder::from_rgba(img, width, height);
+    let encoded_webp = encoder.encode(quality);
+    let b = encoded_webp.as_bytes();
+    return Ok(b.into());
   }
   Err(Error::PIXMAP)?
 }
