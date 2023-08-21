@@ -1,6 +1,6 @@
 {
   "name": "@w5/svg2webp",
-  "version": "0.0.37",
+  "version": "0.0.38",
   "type": "module",
   "exports": {
     ".": {
@@ -55,7 +55,7 @@
     "build": "./sh/build.sh --release",
     "build:debug": "./sh/build.sh",
     "prepublishOnly": "napi prepublish -t npm",
-    "test": "ava",
+    "test": "",
     "universal": "napi universal",
     "version": "napi version"
   },

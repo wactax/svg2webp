@@ -44,9 +44,5 @@ test(
 output :
 
 ```
-
-  ✔ svg → webp (981ms)
-  ─
-
-  1 test passed
+./out.txt
 ```
